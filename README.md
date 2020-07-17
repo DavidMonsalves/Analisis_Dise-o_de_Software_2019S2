@@ -1,1 +1,1 @@
-# Analisis_Dise-o_de_Software_2019S2
+# Analisis_Disenio_de_Software_2019S2
