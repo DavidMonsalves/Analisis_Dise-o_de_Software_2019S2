@@ -1,0 +1,24 @@
+package com.InstanTecnic.demo.Autentificacion.Servicios;
+
+import java.util.Optional;
+
+import com.InstanTecnic.demo.Autentificacion.Modelos.User;
+import com.InstanTecnic.demo.Autentificacion.Repositorios.UserRepositorio;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class UserServicio{
+
+    @Autowired
+    UserRepositorio repositorio;
+
+    public User obtenerNombre(String nombre){
+        Optional<User> user = repositorio.findByUserName(nombre);
+
+        user.orElse(null);
+        return user.get();
+    }
+
+}
